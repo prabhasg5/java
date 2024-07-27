@@ -1,0 +1,50 @@
+/*Create a class called Student with the Data members int sno, m1,m2,m3,m4,total
+float avg,
+Member Functions
+setStudentDetails()
+computeAverage()
+displayStudentDetails() */
+
+import java.util.*;
+class add {
+        int sno;
+        int m1;
+        int m2;
+        int m3;
+        int m4;
+        int total;
+        double avg;
+    public static void main(String[] args)
+    {
+        add s1= new add();
+        s1.setStudentDetails();
+        s1.computeAverage();
+        s1.displayStudentDetails();
+    }
+    public int setStudentDetails()
+    {
+        Scanner scanf=new Scanner(System.in);
+        System.out.println("enter S.no");
+        sno = scanf.nextInt();
+        System.out.println("enter m1");
+        m1 = scanf.nextInt();
+        System.out.println("enter m2");
+        m2 = scanf.nextInt();
+        System.out.println("enter m3");
+        m3 = scanf.nextInt();
+        System.out.println("enter m4");
+        m4 = scanf.nextInt();
+        total = m1+m2+m3+m4;
+        return total;
+    }
+    public double computeAverage()
+    {
+        avg= (m1+m2+m3+m4)/(double)4;
+        return avg;
+    }
+    public void displayStudentDetails()
+    {
+        System.out.println("total marks are = "+total);
+        System.out.println("Average marks are = "+avg);
+    }
+}
