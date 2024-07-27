@@ -1,0 +1,20 @@
+/*Create a class Hello which can contains all the primitive datatypes: byte, int,short, long, float, 
+double, char,
+a. print all the default values 
+b. set the values to them and print those values */
+
+class Hello {
+    
+    public static void main(String[] args) {
+    int a=10;
+    float f=5.6f;
+    byte b=5;
+    short s=2;
+    long l=2334;
+        System.out.println(a);
+        System.out.println(f);
+        System.out.println(b);
+        System.out.println(s);
+        System.out.println(l);
+    }
+}
