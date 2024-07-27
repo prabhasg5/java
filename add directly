@@ -1,0 +1,11 @@
+/*Write a java application to read two numbers and print the sum of the two numbers 
+a. By assigning values directly to the variables*/
+
+class add {
+    
+    public static void main(String[] args) {
+    int a=10;
+    float f=5.6f;
+        System.out.println(a+f);
+    }
+}
