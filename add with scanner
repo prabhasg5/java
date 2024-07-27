@@ -1,0 +1,13 @@
+/*Write a java application to read two numbers and print the sum of the two numbers 
+b. By using the Scanner class for user input */
+
+import java.util.*;
+class add {
+    
+    public static void main(String[] args) {
+    Scanner scanf=new Scanner(System.in);
+    int a=scanf.nextInt();
+    double f=scanf.nextFloat();
+        System.out.println("the sum of the "+a+" and "+f+" is ="+(a+f));
+    }
+}
