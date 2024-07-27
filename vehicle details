@@ -1,0 +1,35 @@
+/*Create a class Vehicle which contains the data members vno, vname, company, typefuel
+member functions
+insertDetails()
+getDetails()*/
+
+import java.util.*;
+class vehicle {
+        int vno;
+        String vname;
+        String company;
+        String typefuel;
+    public static void main(String[] args)
+    {
+        vehicle car= new vehicle();
+        car.insertDetails();
+        car.getDetails();
+    }
+    public void insertDetails()
+    {
+        Scanner scanf= new Scanner(System.in);
+        System.out.println("enter vehicle name");
+        vname = scanf.nextLine();
+        System.out.println("enter fuel type");
+        typefuel = scanf.nextLine();
+        System.out.println("enter vehicle number");
+        vno = scanf.nextInt();
+        
+    }
+    public void getDetails()
+    {
+        System.out.println("vechicle number = "+vno);
+        System.out.println("vehicle name = "+vname);
+        System.out.println("fuel type = "+typefuel);
+    }
+}
