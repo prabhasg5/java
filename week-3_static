@@ -1,0 +1,81 @@
+//*1. write a java program to count the number of the object created*/
+
+class object
+{
+	static int object_count=0; 
+	public object()
+	{
+		object_count++;
+	}
+	/*public static int get_count()
+	{
+		return object_count;
+	}*/
+	public static void display()
+	{
+		//int count=object.get_count();
+		System.out.println("objects in the program are "+object_count);
+	}
+	public static void main(String a[])
+	{
+		object obj1=new object();
+		object obj2=new object();
+		object obj3=new object();
+		object.display();
+	}
+}
+
+
+
+/*2. write a java program for movie ticket reservation*/
+import java.util.*;
+class reservation extends ticket
+{
+    Scanner scanf=new Scanner(System.in);
+    public void reserve()
+    {
+        System.out.println("Total seats: "+(ticket.tot_seats()));
+        System.out.println("Reserved seats: "+(ticket.res_seats()));
+        System.out.println("Available seats: "+(ticket.avail_seats()));
+        
+        System.out.println("enter the number of tickets to reserve");
+        ticket.res_seats=scanf.nextInt();
+        if(ticket.res_seats>(ticket.avail_seats()))
+        {
+            System.out.println((ticket.avail_seats())+"seats not availabe");
+        }
+        else
+        {
+            System.out.println("tickets succesfully booked");
+            System.out.println("avalable seats "+(ticket.avail_seats()));
+        }
+         scanf.close();
+    }
+    public static void main(String a[])
+    {
+        reservation reserve=new reservation();
+        reserve.reserve();
+    }
+}
+class ticket
+{
+    protected static int tot_seats=250;
+    protected static int avail_seats=0;
+    protected static int res_seats=0;
+   
+    protected static int tot_seats()
+    {
+        return tot_seats;
+    }
+    protected static int res_seats()
+    {
+        return res_seats;
+    }
+    protected static int avail_seats()
+    {
+        avail_seats=tot_seats-res_seats;
+        return avail_seats;
+    }
+  
+}
+
