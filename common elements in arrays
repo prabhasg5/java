@@ -1,0 +1,43 @@
+//Write a Java program to find the common elements between two arrays of integers. 
+import static java.lang.System.out;
+import java.util.*;
+class common
+{
+    int size;
+    int arr[];
+    Scanner scanf=new Scanner(System.in);
+    public void input()
+    {
+        out.println("enter the size of the array");
+        this.size=scanf.nextInt();
+        arr = new int[size];
+        out.println("enter the elements in the array");
+        for(int i=0;i<size;i++)
+        {
+            this.arr[i]=scanf.nextInt();
+        }
+    }
+    public static void same_ele(common a1,common a2)
+    {
+        out.println("the common elements are");
+        for(int i=0;i<a1.size;i++)
+        {
+            for(int j=0;j<a2.size;j++)
+            {
+                if(a1.arr[i]==a2.arr[j])
+                {
+                    out.println(a1.arr[i]);
+                    break;
+                }
+            }
+        }
+    }
+    public static void main(String a[])
+    {
+        common a1=new common();
+        common a2=new common();
+        a1.input();
+        a2.input();
+        common.same_ele(a1,a2);
+    }
+}
